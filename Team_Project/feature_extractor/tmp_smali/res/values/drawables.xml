@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="room_chavanne">@drawable/room_ud2120</item>
+    <item type="drawable" name="room_ferrer">@drawable/room_h2215</item>
+    <item type="drawable" name="room_guillissen">@drawable/room_ua2220</item>
+    <item type="drawable" name="room_lameere">@drawable/room_ub2252</item>
+    <item type="drawable" name="room_ua2">@drawable/room_u2</item>
+    <item type="drawable" name="room_ub2">@drawable/room_u2</item>
+    <item type="drawable" name="room_ud2">@drawable/room_u2</item>
+</resources>

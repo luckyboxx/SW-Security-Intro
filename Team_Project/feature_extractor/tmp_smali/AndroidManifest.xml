@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="at.linuxtage.companion" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="at.linuxtage.companion.GLTApplication" android:theme="@style/AppTheme">
+        <activity android:label="@string/app_name" android:name="at.linuxtage.companion.activities.MainActivity" android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.default_searchable" android:value=".activities.SearchResultActivity"/>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity android:name="at.linuxtage.companion.activities.TrackScheduleActivity" android:parentActivityName="at.linuxtage.companion.activities.MainActivity" android:theme="@style/AppTheme.NoActionBar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="at.linuxtage.companion.activities.MainActivity"/>
+        </activity>
+        <activity android:name="at.linuxtage.companion.activities.TrackScheduleEventActivity"/>
+        <activity android:name="at.linuxtage.companion.activities.EventDetailsActivity" android:parentActivityName="at.linuxtage.companion.activities.TrackScheduleActivity">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/at.linuxtage.companion"/>
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="at.linuxtage.companion.activities.TrackScheduleActivity"/>
+        </activity>
+        <activity android:name="at.linuxtage.companion.activities.PersonInfoActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:launchMode="singleTop" android:name="at.linuxtage.companion.activities.SearchResultActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/main_searchable"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:name="at.linuxtage.companion.activities.RoomImageDialogActivity" android:taskAffinity="" android:theme="@style/AlertDialogTheme.NoActionBar"/>
+        <activity android:label="@string/settings" android:name="at.linuxtage.companion.activities.SettingsActivity"/>
+        <receiver android:exported="false" android:name="at.linuxtage.companion.receivers.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="at.linuxtage.companion.services.AlarmIntentService"/>
+        <provider android:authorities="at.linuxtage.companion.search" android:exported="true" android:name="at.linuxtage.companion.providers.SearchSuggestionProvider"/>
+        <provider android:authorities="at.linuxtage.companion.bookmarks" android:exported="false" android:grantUriPermissions="true" android:name="at.linuxtage.companion.providers.BookmarksExportProvider"/>
+    </application>
+</manifest>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textAppearance="?textAppearanceListItem" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="?listPreferredItemPaddingLeft" android:paddingTop="@dimen/list_item_padding" android:paddingRight="?listPreferredItemPaddingRight" android:paddingBottom="@dimen/list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeightSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

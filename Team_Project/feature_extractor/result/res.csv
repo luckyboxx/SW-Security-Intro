@@ -1,0 +1,6 @@
+filename,permission
+./example/at.bitfire.davdroid_205.apk,android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,android.permission.READ_SYNC_SETTINGS,org.dmfs.permission.READ_TASKS,android.permission.WRITE_SYNC_SETTINGS,android.permission.READ_CONTACTS,android.permission.READ_CALENDAR,org.dmfs.permission.WRITE_TASKS,android.permission.ACCESS_WIFI_STATE,android.permission.READ_SYNC_STATS,android.permission.WRITE_CALENDAR,android.permission.ACCESS_NETWORK_STATE,android.permission.INTERNET,android.permission.WRITE_CONTACTS,
+./example/com.allansimon.verbisteandroid_1.apk,
+./example/ch.logixisland.anuto_16.apk,
+./example/ch.abertschi.adfree_20.apk,android.permission.READ_EXTERNAL_STORAGE,android.permission.ACCESS_NETWORK_STATE,android.permission.INTERNET,
+./example/at.linuxtage.companion_700144.apk,android.permission.WAKE_LOCK,android.permission.VIBRATE,android.permission.RECEIVE_BOOT_COMPLETED,android.permission.INTERNET,android.permission.NFC,

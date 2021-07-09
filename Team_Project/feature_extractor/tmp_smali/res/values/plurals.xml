@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="events_download_completed">
+        <item quantity="other">Completed downloading %1$d events</item>
+        <item quantity="one">Completed downloading %1$d event</item>
+    </plurals>
+    <plurals name="selected">
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+    <plurals name="speakers">
+        <item quantity="other">Speakers</item>
+        <item quantity="one">Speaker</item>
+    </plurals>
+</resources>

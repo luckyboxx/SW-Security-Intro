@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/content_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/TextAppearance.AppCompat.Headline" />
+            <TextView android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/TextAppearance.AppCompat.Subhead" />
+            <TextView android:id="@id/persons" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/TextAppearance.AppCompat.Body2" />
+            <View android:layout_marginTop="8.0dip" style="@style/SeparatorLine" />
+            <TextView android:id="@id/track" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:drawableLeft="@drawable/ic_local_offer_grey600_18dp" android:drawableStart="@drawable/ic_local_offer_grey600_18dp" style="@style/Metadata" />
+            <TextView android:id="@id/time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_access_time_grey600_18dp" android:drawableStart="@drawable/ic_access_time_grey600_18dp" style="@style/Metadata" />
+            <TextView android:id="@id/room" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_place_grey600_18dp" style="@style/Metadata" />
+        </LinearLayout>
+        <TextView android:id="@id/abstract_text" android:background="@color/translucent_grey" android:padding="@dimen/content_margin" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/TextAppearance.AppCompat.Body1" />
+        <TextView android:id="@id/description" android:padding="@dimen/content_margin" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/TextAppearance.AppCompat.Body1" />
+        <TextView android:id="@id/links_header" android:visibility="gone" android:layout_marginLeft="@dimen/content_margin" android:layout_marginTop="8.0dip" android:layout_marginRight="@dimen/content_margin" android:text="@string/related_links_header" style="@style/Header" />
+        <android.support.v7.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/links_container" android:paddingLeft="@dimen/content_margin" android:paddingRight="@dimen/content_margin" android:paddingBottom="@dimen/content_margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:showDividers="middle" />
+    </LinearLayout>
+</ScrollView>
